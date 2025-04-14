@@ -1,3 +1,4 @@
 fpdf
 requests
 google-generativeai
+python-dotenv
