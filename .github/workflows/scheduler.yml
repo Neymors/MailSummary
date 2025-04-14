@@ -31,5 +31,11 @@ jobs:
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           RECIPIENT: ${{ secrets.RECIPIENT }}
-        run: |
-          python core/main.py
+      - name: Ejecutar script principal
+      run: python core/main.py
+
+      - name: Subir resumen como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: resumen-pdf
+          path: core/resumen.pdf
