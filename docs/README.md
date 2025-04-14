@@ -38,6 +38,6 @@ MailSummary/ │
 
 1. Cloná el repo  
    ```bash
-   git clone https://github.com/tu-usuario/observatorio-global.git
-   cd observatorio-global
+https://github.com/Neymors/MailSummary   
+cd MailSummary
 python core/main.py
