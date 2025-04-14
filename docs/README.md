@@ -1,19 +1,43 @@
-# MailSummary
+# 🛰️  MailSummary
 
-Este proyecto toma noticias de un RSS, las resume utilizando Gemini, genera un PDF y lo envía por correo electrónico como una newsletter.
+**MailSummary** es una aplicación automatizada que:
 
-## Requisitos
+1. 📡 Recolecta noticias desde múltiples fuentes RSS.
+2. 🧠 Resume los contenidos utilizando modelos de lenguaje como Gemini.
+3. 🧾 Genera un documento PDF con los resúmenes.
+4. 📬 Envía el reporte por email como una newsletter.
 
-- Python 3.x
-- Librerías: gTTS, smtplib, reportlab, etc.
+---
 
-## Instalación
+## 🚀 Tecnologías usadas
 
-1. Clona este repositorio.
-2. Instala las dependencias con `pip install -r requirements.txt`.
-3. Configura las variables de entorno en el archivo `.env`.
+- Python 3.10
+- `gTTS`, `smtplib`, `email`, `fpdf`
+- Modelos LLM (Gemini API)
+- `.env` para variables de entorno
 
-## Uso
+---
 
-1. Modifica el archivo `main.py` para incluir las fuentes RSS que deseas procesar.
-2. Ejecuta `main.py` para generar y enviar el boletín por correo electrónico.
+## 📂 Estructura del proyecto
+MailSummary/ │ 
+├── core/ │ 
+├── app.py # Lógica principal │ 
+├── cliente.py # Consulta a fuentes RSS │ 
+├── resumen.py # Resumen con Gemini │ 
+├── pdf_generator.py # Generación de PDF │ 
+├── mail_sender.py # Envío por email │ 
+├── mail.env # Credenciales de mail │ 
+└── Resumenes/ # PDFs generados │ 
+├── .gitignore 
+├── README.md 
+└── main.py
+
+---
+
+## 🛠️ Cómo correrlo
+
+1. Cloná el repo  
+   ```bash
+   git clone https://github.com/tu-usuario/observatorio-global.git
+   cd observatorio-global
+python core/main.py
