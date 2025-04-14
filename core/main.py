@@ -28,7 +28,9 @@ LISTA_URLS_FEEDS_REALES = [
     # Agrega aquí las URLs correctas de los feeds RSS
 ]
 
-load_dotenv(dotenv_path=r"C:\Users\s\Downloads\Gaston\Programacion\MailSummary\core\mail.env")
+#load_dotenv(dotenv_path=r"C:\Users\s\Downloads\Gaston\Programacion\MailSummary\core\mail.env")
+dotenv_path = os.path.join(os.path.dirname(__file__), 'mail.env')
+load_dotenv(dotenv_path=dotenv_path)
 def main():
     print("Obteniendo noticias...")
     noticias_api = obtener_noticias(LISTA_URLS_FEEDS_REALES)
