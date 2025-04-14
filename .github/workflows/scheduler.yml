@@ -6,7 +6,7 @@ on:
     # Por ejemplo, para las 08:00 AM hora local, si tu zona es UTC-3,
     # convertí a UTC: 08:00 + 3 horas = 11:00 UTC
     - cron: "0 11 * * *"  
-
+  workflow_dispatch:
 jobs:
   enviar_mail:
     runs-on: ubuntu-latest
