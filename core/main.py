@@ -3,8 +3,9 @@ from resumen import resumir_noticias
 from pdf_generator import generar_pdf
 from mail_sender import enviar_email
 from dotenv import load_dotenv
-from dotenv import load_dotenv # No longer needed in GitHub Actions if using secrets
+#from dotenv import load_dotenv # No longer needed in GitHub Actions if using secrets
 import os
+import sys
 
 # **REEMPLAZA ESTAS URLs CON LAS URLs *REALES* DE LOS FEEDS RSS**
 LISTA_URLS_FEEDS_REALES = [
@@ -27,7 +28,7 @@ LISTA_URLS_FEEDS_REALES = [
     # Agrega aquí las URLs correctas de los feeds RSS
 ]
 
-#load_dotenv(dotenv_path=r"C:\Users\s\Downloads\Gaston\Programacion\audio\mail\mail.env")
+load_dotenv(dotenv_path=r"C:\Users\s\Downloads\Gaston\Programacion\audio\mail\mail.env")
 
 def main():
     print("Obteniendo noticias...")

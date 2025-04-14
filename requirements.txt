@@ -2,3 +2,4 @@ fpdf
 requests
 google-generativeai
 python-dotenv
+gunicorn==23.0.0
